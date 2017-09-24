@@ -1,5 +1,5 @@
 #include <string>
-#define RESET   "\033[0m"        
+#define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */
 #define RED     "\033[31m"      /* Red */
 #define GREEN   "\033[32m"      /* Green */
@@ -23,7 +23,7 @@
 #define WAIT_SHORT 1000000 // 1 second
 #define WAIT_MEDIUM 2000000 // 2 seconds
 #define WAIT_LONG 3000000 // 3 seconds
-#define CLEAR "\033[2J" // clear screen 
+#define CLEAR "\033[2J" // clear screen
 
 /*
 Printing functions defined using C++ streams
@@ -45,14 +45,10 @@ Example: prints Hello World instantly in the color blue and then waits one secon
 sb_stream_printer printer;
 printer.stream_print("Hello World", BLUE, INSTANT, SHORT);
 */
-class sb_stream_printer{
+class SBStreamPrinter{
 	public:
-		void stream_print(std::string display, std::string color, int speed, int waitTime);
+		void streamPrint(std::string display, std::string color, int speed, int waitTime);
 		void freeze();
-		void center_stream_print(std::string display, std::string color);
+		void centerStreamPrint(std::string display, std::string color);
 		void clear();
 };
-
-
-
-
