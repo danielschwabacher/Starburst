@@ -44,8 +44,8 @@ waitTime: wait for however many seconds after done printing
 ----WAIT_LONG: wait for 3 seconds
 <------------------------------------------->
 
-Example: prints Hello World instantly in the color blue and then waits one second for additional I/O operations.
-sb_stream_printer printer;
+Example: prints 'Hello World' instantly in the color blue and then waits one second for additional I/O operations.
+SBStreamPrinter printer;
 printer.stream_print("Hello World", BLUE, INSTANT, SHORT);
 
 */
