@@ -49,6 +49,6 @@ class SBStreamPrinter{
 	public:
 		void streamPrint(std::string display, std::string color, int speed, int waitTime);
 		void freeze();
-		void centerStreamPrint(std::string display, std::string color);
+		void centerStreamPrint(std::string display, std::string color, int speed, int wait_time);
 		void clear();
 };
