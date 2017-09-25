@@ -18,15 +18,12 @@ void SBStreamPrinter::streamPrint(std::string display_string, std::string color,
 	std::cout<<color<<RESET<<std::endl;
 }
 
-void SBStreamPrinter::centerStreamPrint(std::string display_string, std::string color, int speed, int wait_time){
+void SBStreamPrinter::centerStreamPrint(std::string display_string, std::string color, int wait_time){
 	struct winsize w;
     ioctl(0, TIOCGWINSZ, &w);
 	int cols = w.ws_col;
-	for (int i = 0; i < display_string.size(); ++i) {
-		std::cout<<std::string((cols-display_string.size())/2, ' ')<<display_string[i]<<std::endl;
-		fflush(stdout);
-		usleep(speed);
-	}
+	std::cout<<std::string((cols-display_string.size())/2, ' ')<<display_string<<std::endl;
+	fflush(stdout);
 	usleep(wait_time);
 }
 

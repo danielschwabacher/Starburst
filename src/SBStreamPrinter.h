@@ -26,8 +26,10 @@
 #define CLEAR "\033[2J" // clear screen
 
 /*
+
 Printing functions defined using C++ streams
 Purpose: to provide an easy interface for timed and color printing
+
 <------------------------------------------->
 display: the string to print
 color: the color to print the display in
@@ -41,14 +43,16 @@ waitTime: wait for however many seconds after done printing
 ----WAIT_MEDIUM: wait for 2 seconds
 ----WAIT_LONG: wait for 3 seconds
 <------------------------------------------->
+
 Example: prints Hello World instantly in the color blue and then waits one second for additional I/O operations.
 sb_stream_printer printer;
 printer.stream_print("Hello World", BLUE, INSTANT, SHORT);
+
 */
 class SBStreamPrinter{
 	public:
 		void streamPrint(std::string display, std::string color, int speed, int waitTime);
 		void freeze();
-		void centerStreamPrint(std::string display, std::string color, int speed, int wait_time);
+		void centerStreamPrint(std::string display, std::string color, int wait_time);
 		void clear();
 };
